@@ -1,0 +1,54 @@
+<doctype html>
+<html lang="en">
+<meta charset="utf-8"/>
+<title> UMAI-TASK</title>
+    <head>
+
+        <script>
+            function calculate()
+            {
+                p = document.getElementById("p").value;
+                n = document.getElementById("n").value;
+                r = document.getElementById("r").value;
+                result = document.getElementById("result");
+                
+                result.innerHTML = "The interest is :  " + (p*n*r/100);
+            }
+        </script>
+            <style>
+                div.title{
+                      background-color:blue;
+             		 height:35px;
+             		 width:100px;
+             		 color: white;
+             		 text-align:center;
+             		 clear:both;
+             		 padding-bottom:0px;
+             		 font-size:30px;
+             		 margin: 0 auto;
+             		}
+                    
+                div {
+                    display: table-row;
+                }
+
+                label, input {
+                    display: table-cell;
+                }
+            </style>
+    </head>
+
+    <body>
+        <div class="title"><a href="index.html"> UMAI </a></div>
+        
+        <h2>Simple Interest Calculation</h2>
+
+       <div> <label> Amount: </label> <input id="p"></div>
+       <div> <label> Rate: </label><input id="r"></div>
+       <div> <label> No. of Years: </label><input id="n"></div><br/>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </body>
+</html>
